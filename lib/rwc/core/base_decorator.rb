@@ -2,7 +2,7 @@
 
 require "ostruct"
 
-module RWC
+module Rwc
   module Core
     class BaseDecorator
       attr_accessor :context

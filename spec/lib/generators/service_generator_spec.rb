@@ -2,9 +2,9 @@
 
 require "tmpdir"
 require "spec_helper"
-require "rwc/generators/service_generator"
+require "generators/rwc/service/service_generator"
 
-RSpec.describe RWC::Generators::ServiceGenerator, type: :generator do
+RSpec.describe Rwc::ServiceGenerator, type: :generator do
   let(:destination_root) { Dir.mktmpdir }
 
   after do
@@ -16,7 +16,7 @@ RSpec.describe RWC::Generators::ServiceGenerator, type: :generator do
       content = File.read(File.join(destination_root, "app/services/example_V_service.rb"))
 
       aggregate_failures do
-        expect(content).to include("class ExampleVService < RWC::Core::BaseService")
+        expect(content).to include("class ExampleVService < Rwc::Core::BaseService")
         expect(content).to include("def call")
         expect(content).to include("safely_execute do")
       end

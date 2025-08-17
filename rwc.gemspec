@@ -3,8 +3,8 @@
 require_relative "lib/rwc/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "rails_with_context"
-  spec.version = RWC::VERSION
+  spec.name = "rwc"
+  spec.version = Rwc::VERSION
   spec.authors = ["Haldane Engineering"]
   spec.email = ["hasstrup.ezekiel@gmail.com"]
 
@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
 
-  spec.add_dependency "rails", ">= 6.0", "< 8.0"
+  spec.add_dependency "rails", ">= 6.0"
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
 end

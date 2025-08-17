@@ -2,7 +2,7 @@
 
 require "rwc/core/base_decorator"
 
-class SimpleObjectDecorator < RWC::Core::BaseDecorator
+class SimpleObjectDecorator < Rwc::Core::BaseDecorator
   delegate_all
 
   def c

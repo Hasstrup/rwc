@@ -2,9 +2,9 @@
 
 require "tmpdir"
 require "spec_helper"
-require "rwc/generators/decorator_generator"
+require "generators/rwc/decorator/decorator_generator"
 
-RSpec.describe RWC::Generators::DecoratorGenerator, type: :generator do
+RSpec.describe Rwc::DecoratorGenerator, type: :generator do
   let(:destination_root) { Dir.mktmpdir }
 
   after do
@@ -17,7 +17,7 @@ RSpec.describe RWC::Generators::DecoratorGenerator, type: :generator do
       content = File.read(File.join(destination_root, "app/decorators/v1/core/my_model_decorator.rb"))
 
       aggregate_failures do
-        expect(content).to include("class V1::Core::MyModelDecorator < RWC::Core::BaseDecorator")
+        expect(content).to include("class V1::Core::MyModelDecorator < Rwc::Core::BaseDecorator")
         expect(content).to include("delegate_all")
       end
     end

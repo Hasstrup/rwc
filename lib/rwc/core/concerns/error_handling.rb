@@ -5,7 +5,7 @@ require "active_record"
 # The ErrorHandling module provides mechanisms for managing errors
 # within service classes. It includes methods for safely executing
 # blocks of code and handling known error classes.
-module RWC
+module Rwc
   module Core
     module Concerns
       module ErrorHandling

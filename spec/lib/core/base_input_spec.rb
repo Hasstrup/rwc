@@ -3,7 +3,7 @@
 require "spec_helper"
 require "fixtures/example_input"
 
-RSpec.describe RWC::Core::BaseInput, type: :input do
+RSpec.describe Rwc::Core::BaseInput, type: :input do
   let(:input) { BasicExampleInput.new(**params) }
   let(:core_params) do
     BasicExampleInput::REQUIRED_KEYS.each_with_object({}) do |nxt, acc|

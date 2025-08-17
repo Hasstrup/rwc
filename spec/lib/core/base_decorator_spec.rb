@@ -4,7 +4,7 @@ require "spec_helper"
 require "fixtures/example_decorator"
 require "ostruct"
 
-RSpec.describe RWC::Core::BaseDecorator, type: :decorator do
+RSpec.describe Rwc::Core::BaseDecorator, type: :decorator do
   let(:obj) { double(a: 1, b: 3) }
   let(:decorator) { SimpleObjectDecorator.decorate(obj) }
 

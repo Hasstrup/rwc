@@ -2,7 +2,7 @@
 
 require "rwc/core/base_service"
 
-class BasicExampleServiceWithInputValidation < RWC::Core::BaseService
+class BasicExampleServiceWithInputValidation < Rwc::Core::BaseService
   performs_checks
 
   def initialize(input:)

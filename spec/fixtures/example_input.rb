@@ -12,7 +12,7 @@ end
 class PolymorphicAbstractRecord < AbstractRecord
 end
 
-class BasicExampleInput < RWC::Core::BaseInput
+class BasicExampleInput < Rwc::Core::BaseInput
   REQUIRED_KEYS = %i[name age id].freeze
   attributes(*REQUIRED_KEYS, :email, :type)
 

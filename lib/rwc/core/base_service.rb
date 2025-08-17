@@ -1,10 +1,10 @@
-require "rwc/core/context"
-require "rwc/core/concerns/error_handling"
+require_relative "context"
+require_relative "concerns/error_handling"
 
 # BaseService serves as a foundational class for creating service objects
 # in the application. It provides a standardized interface for service calls
 # and integrates error handling mechanisms.
-module RWC
+module Rwc
   module Core
     class BaseService
       include Concerns::ErrorHandling::Validatable

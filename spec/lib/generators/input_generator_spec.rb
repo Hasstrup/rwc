@@ -2,9 +2,9 @@
 
 require "tmpdir"
 require "spec_helper"
-require "rwc/generators/input_generator"
+require "generators/rwc/input/input_generator"
 
-RSpec.describe RWC::Generators::InputGenerator, type: :generator do
+RSpec.describe Rwc::InputGenerator, type: :generator do
   let(:destination_root) { Dir.mktmpdir }
 
   after do
@@ -18,7 +18,7 @@ RSpec.describe RWC::Generators::InputGenerator, type: :generator do
         content = File.read(File.join(destination_root, "app/inputs/v1/core/create_input.rb"))
 
         aggregate_failures do
-          expect(content).to include("class V1::Core::CreateInput < RWC::Core::BaseInput")
+          expect(content).to include("class V1::Core::CreateInput < Rwc::Core::BaseInput")
           expect(content).to include("REQUIRED_KEYS")
           expect(content).to include("attributes()")
         end
@@ -31,7 +31,7 @@ RSpec.describe RWC::Generators::InputGenerator, type: :generator do
         content = File.read(File.join(destination_root, "app/inputs/v1/core/query_input.rb"))
 
         aggregate_failures do
-          expect(content).to include("class V1::Core::QueryInput < RWC::Core::Queries::SimpleInput")
+          expect(content).to include("class V1::Core::QueryInput < Rwc::Core::Queries::SimpleInput")
           expect(content).to include("input_for")
         end
       end

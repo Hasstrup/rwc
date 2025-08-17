@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module RWC
+module Rwc
+  # The Context class is used to encapsulate the result of a service operation,
+  # holding information about success, errors, messages, and any relevant payload.
   module Core
-    # The Context class is used to encapsulate the result of a service operation,
-    # holding information about success, errors, messages, and any relevant payload.
     class Context
       attr_reader :success, :errors, :messages, :payload
 

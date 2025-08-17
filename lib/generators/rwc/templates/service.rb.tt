@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-class <%= class_name %> < RWC::Core::BaseService
-  # define service body here
+class <%= class_name %> < Rwc::Core::BaseService
   performs_checks
 
   def initialize(input:)

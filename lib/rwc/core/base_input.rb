@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require "rwc/core/concerns/validation"
+require_relative "concerns/validation"
 require "ostruct"
 
-module RWC
+module Rwc
   module Core
     # Represents a base input class for handling and validating input data.
     class BaseInput
@@ -83,7 +83,9 @@ module RWC
         to_h.slice(*args)
       end
 
-      delegate :to_h, to: :input
+      def to_h(*args)
+        input.to_h(*args)
+      end
 
       private
 
