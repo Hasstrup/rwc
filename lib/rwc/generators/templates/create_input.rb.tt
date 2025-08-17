@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+class <%= class_name %> < RWC::Core::BaseInput
+  # define service body here
+  REQUIRED_KEYS = []
+  attributes()
+  
+  def validate!
+   # define validation rules here
+  end
+end

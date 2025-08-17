@@ -1,0 +1,20 @@
+# frozen_string_literal: true
+
+class <%= class_name %> < RWC::Core::BaseService
+  # define service body here
+  performs_checks
+
+  def initialize(input:)
+    @input = input
+  end
+
+  def call
+    safely_execute do
+      # logic goes in here
+    end
+  end
+
+  private
+
+  attr_reader :input
+end
