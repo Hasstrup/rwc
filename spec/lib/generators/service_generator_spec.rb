@@ -12,11 +12,11 @@ RSpec.describe Rwc::ServiceGenerator, type: :generator do
   end
   describe "generating a service with the correct template" do
     it "creates a service file with the correct content" do
-      run_generator(described_class, ["ExampleVService"], destination_root: destination_root)
-      content = File.read(File.join(destination_root, "app/services/example_V_service.rb"))
+      run_generator(described_class, ["MainService"], destination_root: destination_root)
+      content = File.read(File.join(destination_root, "app/services/main_service.rb"))
 
       aggregate_failures do
-        expect(content).to include("class ExampleVService < Rwc::Core::BaseService")
+        expect(content).to include("class MainService < Rwc::Core::BaseService")
         expect(content).to include("def call")
         expect(content).to include("safely_execute do")
       end
